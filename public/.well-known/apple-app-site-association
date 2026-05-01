@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "DK6HSUH8L7.com.jsonsweeney.promad",
+        "paths": ["/trips/*"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.jsonsweeney.promad",
+        "sha256_cert_fingerprints": ["CD:82:3C:44:1D:0A:17:44:D1:7F:0C:4A:73:83:63:DD:06:F0:E1:22:6C:09:4B:D5:87:E1:38:5C:3C:93:9F:6A"]
+      }
+    }
+  ]
