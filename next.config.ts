@@ -9,6 +9,10 @@ module.exports = {
         source: "/terms",
         destination: "/terms.html",
       },
+      {
+        source: "/.well-known/assetlinks.json",
+        destination: "/assetlinks.json",
+      },
     ];
   },
 };
