@@ -1,13 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  async headers() {
+module.exports = {
+  async rewrites() {
     return [
       {
-        source: "/.well-known/assetlinks.json",
-        headers: [{ key: "Content-Type", value: "application/json" }],
+        source: "/privacy",
+        destination: "/privacy.html",
+      },
+      {
+        source: "/terms",
+        destination: "/terms.html",
       },
     ];
   },
 };
-
-module.exports = nextConfig;
