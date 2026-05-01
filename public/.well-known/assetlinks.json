@@ -4,7 +4,7 @@
       "target": {
         "namespace": "android_app",
         "package_name": "com.jsonsweeney.promad",
-        "sha256_cert_fingerprints": ["CD:82:3C:44:1D:0A:17:44:D1:7F:0C:4A:73:83:63:DD:06:F0:E1:22:6C:09:4B:D5:87:E1:38:5C:3C:93:9F:6A, AC:15:85:F0:19:0B:9F:1F:7C:A1:FA:1E:F5:7E:D9:8D:BE:5F:73:47:4C:06:47:26:E3:71:97:11:19:A7:7E:06"]
+        "sha256_cert_fingerprints": ["CD:82:3C:44:1D:0A:17:44:D1:7F:0C:4A:73:83:63:DD:06:F0:E1:22:6C:09:4B:D5:87:E1:38:5C:3C:93:9F:6A", "AC:15:85:F0:19:0B:9F:1F:7C:A1:FA:1E:F5:7E:D9:8D:BE:5F:73:47:4C:06:47:26:E3:71:97:11:19:A7:7E:06"]
       }
     }
   ]
