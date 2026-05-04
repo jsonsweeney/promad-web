@@ -134,7 +134,7 @@ export default function Home() {
                   <span>
                     Agree to{" "}
                     <a
-                      href="https://play.google.com/apps/testing/com.promad.app"
+                      href="https://play.google.com/apps/testing/com.jsonsweeny.promad"
                       target="_blank"
                     >
                       become a tester
@@ -146,7 +146,7 @@ export default function Home() {
                 </li>
               </ol>
               <a
-                href="https://play.google.com/store/apps/details?id=com.promad.app"
+                href="https://play.google.com/store/apps/details?id=com.jsonsweeney.promad"
                 className={`${styles.betaBtn} ${styles.betaBtnAndroid}`}
                 target="_blank"
               >
