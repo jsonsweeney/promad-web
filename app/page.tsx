@@ -134,7 +134,7 @@ export default function Home() {
                   <span>
                     Agree to{" "}
                     <a
-                      href="https://play.google.com/apps/testing/com.jsonsweeny.promad"
+                      href="https://play.google.com/apps/testing/com.jsonsweeney.promad"
                       target="_blank"
                     >
                       become a tester
