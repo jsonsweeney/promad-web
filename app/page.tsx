@@ -98,14 +98,16 @@ export default function Home() {
               <h3 className={styles.betaCardTitle}>Apple Devices</h3>
               <ol className={styles.betaSteps}>
                 <li>
-                  Download{" "}
-                  <a
-                    href="https://apps.apple.com/us/app/testflight/id899247664"
-                    target="_blank"
-                  >
-                    TestFlight
-                  </a>{" "}
-                  from the App Store
+                  <span>
+                    Download{" "}
+                    <a
+                      href="https://apps.apple.com/us/app/testflight/id899247664"
+                      target="_blank"
+                    >
+                      TestFlight
+                    </a>{" "}
+                    from the App Store
+                  </span>
                 </li>
                 <li>
                   Click the button below to install the beta app on TestFlight
