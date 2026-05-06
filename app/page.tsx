@@ -97,7 +97,16 @@ export default function Home() {
               </div>
               <h3 className={styles.betaCardTitle}>Apple Devices</h3>
               <ol className={styles.betaSteps}>
-                <li>Download TestFlight from the App Store</li>
+                <li>
+                  Download{" "}
+                  <a
+                    href="https://apps.apple.com/us/app/testflight/id899247664"
+                    target="_blank"
+                  >
+                    TestFlight
+                  </a>{" "}
+                  from the App Store
+                </li>
                 <li>
                   Click the button below to install the beta app on TestFlight
                 </li>
@@ -127,17 +136,6 @@ export default function Home() {
                       target="_blank"
                     >
                       google group
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    Agree to{" "}
-                    <a
-                      href="https://play.google.com/apps/testing/com.jsonsweeney.promad"
-                      target="_blank"
-                    >
-                      become a tester
                     </a>
                   </span>
                 </li>
