@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap");
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--cream, #f8f7f4);
+  color: var(--text, #1a1a2e);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ══════════════════════════════════════
+   HEADER
+══════════════════════════════════════ */
+.header {
+  border-bottom: 1px solid rgba(79, 104, 179, 0.12);
+  background: var(--white, #ffffff);
+  padding: 18px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.headerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.backLink {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blue, #4f68b3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.backLink:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--blue-dark, #4f68b3);
+  text-decoration: none;
+}
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero {
+  background: radial-gradient(
+    circle at 50% 40%,
+    var(--blue, #4f68b3) 0%,
+    var(--blue-dark, #4f68b3) 100%
+  );
+  color: var(--white, #ffffff);
+  padding: 64px 24px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroInner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: var(--white, #ffffff);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "DM Sans", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ══════════════════════════════════════
+   MAIN CONTAINER
+══════════════════════════════════════ */
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  width: 100%;
+  flex: 1;
+}
+
+/* ── Contact Options Grid ── */
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: -80px;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 5;
+}
+
+.contactCard {
+  background: var(--white, #ffffff);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contactCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.contactIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--blue, #4f68b3),
+    var(--blue-dark, #4f68b3)
+  );
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.whatsappIconWrap {
+  background: var(--whatsapp, #25d366);
+}
+
+.instagramIconWrap {
+  background: linear-gradient(
+    135deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+.contactCardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text, #1a1a2e);
+  margin-bottom: 6px;
+  font-family: "DM Sans", sans-serif;
+}
+
+.contactCardDesc {
+  font-size: 13.5px;
+  color: var(--text-muted, #6b7280);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  font-family: "DM Sans", sans-serif;
+  flex: 1;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue, #4f68b3);
+  transition: color 0.2s ease;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.contactBtn:hover {
+  color: var(--blue-dark, #4f68b3);
+  text-decoration: underline;
+}
+
+/* ══════════════════════════════════════
+   QUICK HELP TOPICS
+══════════════════════════════════════ */
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text, #1a1a2e);
+  margin-bottom: 8px;
+}
+
+.sectionSubtitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: var(--text-muted, #6b7280);
+}
+
+/* ── FAQ Accordion ── */
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 860px;
+  margin: 0 auto 56px;
+}
+
+.faqItem {
+  background: var(--white, #ffffff);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faqItem[open] {
+  border-color: rgba(79, 104, 179, 0.4);
+}
+
+.faqSummary {
+  padding: 18px 22px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text, #1a1a2e);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.faqSummary::-webkit-details-marker {
+  display: none;
+}
+
+.faqSummary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--blue, #4f68b3);
+  transition: transform 0.2s ease;
+  margin-left: 12px;
+}
+
+.faqItem[open] .faqSummary::after {
+  content: "−";
+}
+
+.faqAnswer {
+  padding: 0 22px 20px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #4b5563;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 14px;
+}
+
+.faqAnswer a {
+  color: var(--blue, #4f68b3);
+  text-decoration: underline;
+}
+
+.faqAnswer ul,
+.faqAnswer ol {
+  margin: 10px 0 10px 20px;
+}
+
+.faqAnswer li {
+  margin-bottom: 6px;
+}
+
+/* ══════════════════════════════════════
+   EMAIL TEMPLATES / ACTIONS SECTION
+══════════════════════════════════════ */
+.actionBanner {
+  background: var(--white, #ffffff);
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.actionBannerTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text, #1a1a2e);
+  margin-bottom: 8px;
+}
+
+.actionBannerDesc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14.5px;
+  color: var(--text-muted, #6b7280);
+  max-width: 560px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryEmailBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--blue-dark, #4f68b3);
+  color: #ffffff;
+  border-radius: 100px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.primaryEmailBtn:hover {
+  transform: translateY(-2px);
+  background: var(--blue, #4f68b3);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(79, 104, 179, 0.08);
+  color: var(--blue-dark, #4f68b3);
+  border-radius: 100px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  transform: translateY(-2px);
+  background: rgba(79, 104, 179, 0.16);
+}
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+.footer {
+  background: var(--text, #4f68b3);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 36px 32px;
+  margin-top: auto;
+}
+
+.footerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footerLogo {
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white, #ffffff);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--white, #ffffff);
+}
+
+.footerCopy {
+  font-size: 13px;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 860px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    margin-top: -40px;
+  }
+
+  .header {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 48px 20px 60px;
+  }
+
+  .main {
+    padding: 32px 20px 60px;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+}

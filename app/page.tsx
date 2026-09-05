@@ -161,6 +161,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <p className={styles.footerLogo}>Promad</p>
         <div className={styles.footerLinks}>
+          <Link href="/support">Support</Link>
           <Link href="/terms">Terms &amp; Conditions</Link>
           <Link href="/privacy">Privacy Policy</Link>
         </div>
