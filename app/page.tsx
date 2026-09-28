@@ -54,8 +54,7 @@ export default function Home() {
                   >
                     <FontAwesomeIcon icon={faApple} size="2x" />
                     <span>
-                      Download on
-                      <br />
+                      Download on <br />
                       the App Store
                     </span>
                   </a>
@@ -69,8 +68,7 @@ export default function Home() {
                   >
                     <FontAwesomeIcon icon={faGooglePlay} size="2x" />
                     <span>
-                      Download on
-                      <br />
+                      Download on <br />
                       Google Play
                     </span>
                   </a>

@@ -41,21 +41,37 @@ body {
 /* ══════════════════════════════════════
    NAVIGATION
 ══════════════════════════════════════ */
+/* ══════════════════════════════════════
+   NAVIGATION
+══════════════════════════════════════ */
+.nav {
+  position: relative;
+  z-index: 10;
+}
+
 .navInner {
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Ensures the text and icon align perfectly */
 }
 
 .navIcons {
   display: flex;
   gap: 16px;
   list-style: none;
+  margin: 0; /* Resets default list margin */
+}
+
+.navIcons a {
+  color: var(--text); /* Default dark color for desktop */
+  transition: color 0.2s ease;
 }
 
 .navHeading {
   font-size: 24px;
   font-family: "Oleo Script Swash Caps", cursive;
+  margin: 0;
 }
 
 /* ══════════════════════════════════════
@@ -147,6 +163,7 @@ body {
   border-radius: 100px;
   display: flex;
   align-items: center;
+  text-align: left;
   justify-content: center;
   gap: 12px;
   padding: 0.75rem 1.25rem;
@@ -271,6 +288,19 @@ body {
 
 /* iPad / Tablets */
 @media (max-width: 1024px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Make text/icons white since they are now over the dark hero image */
+  .navHeading,
+  .navIcons a {
+    color: var(--white);
+  }
+
   .hero {
     padding: 3rem 2.5rem 0 2.5rem;
     min-height: auto;
@@ -355,7 +385,7 @@ body {
   .mockupImage {
     max-width: 100%; /* Make phone slightly wider on tiny screens */
     max-height: 500px;
-    bottom: -50px;
+    bottom: -40px;
   }
 
   .section {
