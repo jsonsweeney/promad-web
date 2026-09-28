@@ -4,6 +4,11 @@ import React, { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import styles from "./reviewList.module.css"; // Updated import!
 import Review from "../review/review.component";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Accept children to render the header text inline with controls
 const ReviewList = ({ children }: { children: React.ReactNode }) => {
@@ -27,10 +32,10 @@ const ReviewList = ({ children }: { children: React.ReactNode }) => {
         {children}
         <div className={styles.emblaControls}>
           <button className={styles.emblaButton} onClick={scrollPrev}>
-            ‹
+            <FontAwesomeIcon icon={faChevronLeft} />
           </button>
           <button className={styles.emblaButton} onClick={scrollNext}>
-            ›
+            <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
       </div>

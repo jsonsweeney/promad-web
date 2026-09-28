@@ -35,13 +35,13 @@
 }
 
 .emblaButton {
-  background-color: #111;
-  color: white;
-  border: none;
+  background-color: white;
+  color: #111625;
+  border: 1px solid #cdcbcb;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -58,8 +58,6 @@
 /* Tablets */
 @media (max-width: 1024px) {
   .emblaSlide {
-    flex: 0 0 calc(65% - 16px);
-    min-width: 400px; /* Lower minimum limit for tablet */
   }
 }
 

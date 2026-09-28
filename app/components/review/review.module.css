@@ -125,6 +125,10 @@
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
+  .categoryList {
+    margin-top: 1.5rem;
+  }
+
   .reviewItem {
     flex-direction: column; /* Stack image on top, text on bottom */
     gap: 16px;
