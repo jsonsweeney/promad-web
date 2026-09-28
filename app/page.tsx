@@ -7,65 +7,89 @@ import {
   faAppStore,
   faGooglePlay,
   faInstagram,
-  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import Review from "./components/review/review.component";
+import ReviewList from "./components/reviewList/reviewList.component";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroInner}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heading}>
-              <span className={styles.from}>
-                {" "}
-                From <span className={styles.nomad}>Nomad</span> to
-              </span>
-              <em className={styles.promad}>Promad</em>
-            </h1>
-            <p className={styles.subtext}>
-              The minimalist travel companion for explorers. Discover
-              destinations, plan trips, track your stats, and share your
-              adventures.
-            </p>
-
-            <div className={styles.community}>
-              <p className={styles.communityLabel}>Join the community</p>
-              <div className={styles.communityButtons}>
-                <a
-                  href="https://chat.whatsapp.com/GeLskpj7JuT9Yvvt9Qb696"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.socialBtn} ${styles.whatsapp}`}
-                >
-                  <FontAwesomeIcon icon={faWhatsapp} height={20} />
-                  WhatsApp
-                </a>
-                <a
-                  href="https://instagram.com/getpromad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles.socialBtn} ${styles.instagram}`}
-                >
-                  <FontAwesomeIcon icon={faInstagram} height={20} />
-                  Instagram
-                </a>
-              </div>
+      <nav className={`${styles.container} ${styles.nav}`}>
+        <div className={styles.navInner}>
+          <h2 className={styles.navHeading}>Promad</h2>
+          <ul className={styles.navIcons}>
+            <li className={styles.navIcon}>
+              <a
+                href="https://www.instagram.com/gopromad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section className={`${styles.heroContainer}`}>
+        <div className={styles.hero}>
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <h1 className={styles.heading}>
+                Take your <span>adventures</span> <br />
+                to the <span>next level.</span>
+              </h1>
+              <p className={styles.subtext}>
+                The minimalist travel companion for explorers. Discover
+                destinations, plan trips, track your stats, and share your
+                adventures.
+              </p>
+              <ul className={styles.storeButtons}>
+                <li>
+                  <a
+                    href="https://apps.apple.com/us/app/promad/id6762510695"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.storeButton}
+                  >
+                    <FontAwesomeIcon icon={faApple} size="2x" />
+                    <span>
+                      Download on
+                      <br />
+                      the App Store
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.jsonsweeney.promad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.storeButton}
+                  >
+                    <FontAwesomeIcon icon={faGooglePlay} size="2x" />
+                    <span>
+                      Download on
+                      <br />
+                      Google Play
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
 
-          <div className={styles.mockup}>
-            <img
-              src="/mockup.png"
-              alt="Promad app preview on a phone"
-              className={styles.mockupImage}
-            />
+            <div className={styles.mockup}>
+              <img
+                src="/mockup.png"
+                alt="Promad app preview on a phone"
+                className={styles.mockupImage}
+              />
+            </div>
           </div>
         </div>
 
         {/* Oval mask curve */}
-        <div className={styles.mask}>
+        {/* <div className={styles.mask}>
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -77,95 +101,36 @@ export default function Home() {
               fill="#F8F7F4"
             ></path>
           </svg>
-        </div>
+        </div> */}
       </section>
 
       {/* Beta Join Section */}
-      <section className={styles.beta}>
-        <div className={styles.betaInner}>
-          <h2 className={styles.betaTitle}>How to join the Beta Test</h2>
-          <p className={styles.betaSubtext}>
-            Get early access to Promad and help make something awesome for
-            like-minded travellers
-          </p>
-
-          <div className={styles.betaGrid}>
-            {/* Apple */}
-            <div className={styles.betaCard}>
-              <div className={styles.betaCardIcon}>
-                <FontAwesomeIcon icon={faApple} height={32} />
-              </div>
-              <h3 className={styles.betaCardTitle}>Apple Devices</h3>
-              <ol className={styles.betaSteps}>
-                <li>
-                  <span>
-                    Download{" "}
-                    <a
-                      href="https://apps.apple.com/us/app/testflight/id899247664"
-                      target="_blank"
-                    >
-                      TestFlight
-                    </a>{" "}
-                    from the App Store
-                  </span>
-                </li>
-                <li>
-                  Click the button below to install the beta app on TestFlight
-                </li>
-              </ol>
-              <a
-                href="https://testflight.apple.com/join/bfc9U7Xy"
-                className={`${styles.betaBtn} ${styles.betaBtnApple}`}
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faAppStore} height={28} />
-                Join via TestFlight
-              </a>
-            </div>
-
-            {/* Android */}
-            <div className={styles.betaCard}>
-              <div className={styles.betaCardIcon}>
-                <FontAwesomeIcon icon={faAndroid} height={32} />
-              </div>
-              <h3 className={styles.betaCardTitle}>Android Devices</h3>
-              <ol className={styles.betaSteps}>
-                <li>
-                  <span>
-                    Join the{" "}
-                    <a
-                      href="https://groups.google.com/g/promad"
-                      target="_blank"
-                    >
-                      google group
-                    </a>
-                  </span>
-                </li>
-                <li>
-                  Click the button below to install the app on the play store
-                </li>
-              </ol>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.jsonsweeney.promad"
-                className={`${styles.betaBtn} ${styles.betaBtnAndroid}`}
-                target="_blank"
-              >
-                <FontAwesomeIcon icon={faGooglePlay} height={28} />
-                Join via Play Store
-              </a>
-            </div>
+      <section className={`${styles.container} ${styles.section}`}>
+        <ReviewList>
+          <div className={styles.sectionHeaderBlock}>
+            <h2>
+              <span>Review</span> destinations to help fellow promads
+            </h2>
+            <p>
+              Share your experiences and insights to help the Promad community
+              discover the best travel destinations.
+            </p>
           </div>
-        </div>
+        </ReviewList>
       </section>
 
       <footer className={styles.footer}>
-        <p className={styles.footerLogo}>Promad</p>
-        <div className={styles.footerLinks}>
-          <Link href="/support">Support</Link>
-          <Link href="/terms">Terms &amp; Conditions</Link>
-          <Link href="/privacy">Privacy Policy</Link>
+        <div className={`${styles.container} ${styles.footerContainer}`}>
+          <p className={styles.footerLogo}>Promad</p>
+          <div className={styles.footerLinks}>
+            <Link href="/support">Support</Link>
+            <Link href="/terms">Terms &amp; Conditions</Link>
+            <Link href="/privacy">Privacy Policy</Link>
+          </div>
+          <p className={styles.footerCopy}>
+            © 2026 Promad. All rights reserved.
+          </p>
         </div>
-        <p className={styles.footerCopy}>© 2026 Promad. All rights reserved.</p>
       </footer>
     </>
   );

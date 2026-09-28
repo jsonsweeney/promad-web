@@ -1,0 +1,78 @@
+/* --- EMBLA CAROUSEL REQUIRED STYLES --- */
+.emblaRoot {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.emblaViewport {
+  overflow: hidden;
+}
+
+.emblaContainer {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  gap: 32px;
+}
+
+.emblaSlide {
+  flex: 0 0 calc(40% - 12px);
+  min-width: 600px; /* Constrains slide to not shrink too small on desktop */
+}
+
+/* --- LAYOUT: TEXT & CONTROLS ROW --- */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  gap: 24px;
+}
+
+.emblaControls {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.emblaButton {
+  background-color: #111;
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.emblaButton:hover {
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .emblaSlide {
+    flex: 0 0 calc(65% - 16px);
+    min-width: 400px; /* Lower minimum limit for tablet */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start; /* Stacks text and buttons on mobile */
+    gap: 16px;
+  }
+
+  .emblaSlide {
+    flex: 0 0 100%;
+    min-width: 100%; /* IMPORTANT: overrides the 600px desktop rule so it fits the screen */
+  }
+}
