@@ -84,11 +84,11 @@ body {
   flex-direction: column;
   overflow: hidden;
   border-radius: 30px;
-  background-image: url("/scottish-highlands.jpg");
+  background-image: url("/scottish-highlands-2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 3rem 4rem 0 4rem; /* Removed bottom padding so the phone can sit flush */
+  padding: 3rem 4rem; /* Removed bottom padding so the phone can sit flush */
 }
 
 .hero::before {
@@ -196,10 +196,10 @@ body {
 
 .mockupImage {
   position: absolute;
-  right: -10%;
+  right: -12%;
   /* width: 120%; */
-  max-height: calc(100% + 90px);
-  bottom: -90px;
+  max-height: calc(100% + 6rem);
+  bottom: calc(-3rem - 60px);
   opacity: 0;
   transform: translateY(32px);
   animation: rise 0.8s ease 0.4s forwards;

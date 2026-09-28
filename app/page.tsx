@@ -78,7 +78,7 @@ export default function Home() {
 
             <div className={styles.mockup}>
               <img
-                src="/mockup.png"
+                src="/mockup-3.png"
                 alt="Promad app preview on a phone"
                 className={styles.mockupImage}
               />
