@@ -53,7 +53,7 @@ const ReviewList = ({ children }: { children: React.ReactNode }) => {
                 Safety: 5,
                 "Food Scene": 5,
                 Affordability: 5,
-                Scenery: 5,
+                Scenery: 4,
               }}
               destination="Bologna, Italy"
             />

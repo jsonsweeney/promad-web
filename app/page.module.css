@@ -35,43 +35,6 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
   width: 100%;
-  /* on mobile full width */
-}
-
-/* ══════════════════════════════════════
-   NAVIGATION
-══════════════════════════════════════ */
-/* ══════════════════════════════════════
-   NAVIGATION
-══════════════════════════════════════ */
-.nav {
-  position: relative;
-  z-index: 10;
-}
-
-.navInner {
-  padding: 1rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Ensures the text and icon align perfectly */
-}
-
-.navIcons {
-  display: flex;
-  gap: 16px;
-  list-style: none;
-  margin: 0; /* Resets default list margin */
-}
-
-.navIcons a {
-  color: var(--text); /* Default dark color for desktop */
-  transition: color 0.2s ease;
-}
-
-.navHeading {
-  font-size: 24px;
-  font-family: "Oleo Script Swash Caps", cursive;
-  margin: 0;
 }
 
 /* ══════════════════════════════════════
@@ -88,7 +51,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 3rem 4rem; /* Removed bottom padding so the phone can sit flush */
+  padding: 3rem 4rem;
 }
 
 .hero::before {
@@ -114,11 +77,10 @@ body {
   position: relative;
 }
 
-/* ── Hero Content ── */
 .heroContent {
   color: var(--white);
   z-index: 2;
-  padding-bottom: 3rem; /* Give text breathing room from the bottom */
+  padding-bottom: 3rem;
 }
 
 .heading {
@@ -197,7 +159,6 @@ body {
 .mockupImage {
   position: absolute;
   right: -12%;
-  /* width: 120%; */
   max-height: calc(100% + 6rem);
   bottom: calc(-3rem - 60px);
   opacity: 0;
@@ -224,6 +185,7 @@ body {
 .section h2 {
   font-size: 36px;
   font-weight: 700;
+  line-height: 120%;
 }
 
 .section h2 span {
@@ -234,93 +196,20 @@ body {
   font-size: 18px;
   color: #666;
   max-width: 600px;
-}
-
-/* ══════════════════════════════════════
-   FOOTER
-══════════════════════════════════════ */
-.footer {
-  background: var(--text);
-  color: rgba(255, 255, 255, 0.6);
-  padding: 40px 0;
-}
-
-.footerContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.footerLogo {
-  font-family: "Oleo Script Swash Caps", cursive;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--white);
-  margin: 0;
-}
-
-.footerLinks {
-  display: flex;
-  gap: 24px;
-}
-
-.footerLinks a {
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.footerLinks a:hover {
-  color: var(--white);
-}
-
-.footerCopy {
-  font-size: 13px;
-  margin: 0;
+  margin-top: 0.75rem;
 }
 
 /* ══════════════════════════════════════
    RESPONSIVE LAYOUT
 ══════════════════════════════════════ */
-
-/* iPad / Tablets */
 @media (max-width: 1024px) {
-  .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  /* Make text/icons white since they are now over the dark hero image */
-  .navHeading,
-  .navIcons a {
-    color: var(--white);
-  }
-
   .hero {
     padding: 3rem 2.5rem 0 2.5rem;
     min-height: auto;
     border-radius: 0px;
-    &::before {
-      border-radius: 0px;
-    }
   }
-
-  .navInner {
-    padding: 0.75rem 0;
-  }
-
-  .heroContainer {
-    max-width: 100%;
-    padding: 0;
-  }
-
   .hero::before {
-    /* Make the gradient darker over the whole image so text remains readable when centered */
+    border-radius: 0px;
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.75) 0%,
@@ -329,15 +218,20 @@ body {
     );
   }
 
+  .heroContainer {
+    max-width: 100%;
+    padding: 0;
+  }
+
   .heroInner {
-    grid-template-columns: 1fr; /* Stack into a single column */
+    grid-template-columns: 1fr;
     gap: 0;
   }
 
   .heroContent {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center everything */
+    align-items: center;
     text-align: center;
     padding-bottom: 0;
   }
@@ -352,19 +246,18 @@ body {
 
   .mockup {
     display: flex;
-    justify-content: center; /* Center the phone image */
+    justify-content: center;
   }
 
   .mockupImage {
-    position: relative; /* Break it out of absolute positioning */
-    bottom: -60px; /* Slight hang over the bottom edge */
+    position: relative;
+    bottom: -60px;
     max-width: 65%;
     max-height: 500px;
     left: 0;
   }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
@@ -383,7 +276,7 @@ body {
   }
 
   .mockupImage {
-    max-width: 100%; /* Make phone slightly wider on tiny screens */
+    max-width: 100%;
     max-height: 500px;
     bottom: -40px;
   }
@@ -394,17 +287,12 @@ body {
   }
 
   .section h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
-  .footerContainer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .footerLinks {
-    flex-direction: column;
-    gap: 12px;
+  .sectionHeaderBlock {
+    & p {
+      font-size: 16px;
+    }
   }
 }

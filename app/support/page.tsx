@@ -51,17 +51,6 @@ export default function SupportPage() {
   return (
     <div className={styles.page}>
       {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <Link href="/" className={styles.backLink}>
-            <FontAwesomeIcon icon={faArrowLeft} height={14} />
-            Back to Promad
-          </Link>
-          <Link href="/" className={styles.logo}>
-            Promad
-          </Link>
-        </div>
-      </header>
 
       {/* Hero */}
       <section className={styles.hero}>
@@ -215,22 +204,6 @@ export default function SupportPage() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.footerInner}>
-          <p className={styles.footerLogo}>Promad</p>
-          <div className={styles.footerLinks}>
-            <Link href="/">Home</Link>
-            <Link href="/support">Support</Link>
-            <Link href="/terms">Terms &amp; Conditions</Link>
-            <Link href="/privacy">Privacy Policy</Link>
-          </div>
-          <p className={styles.footerCopy}>
-            © 2026 Promad. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import Header from "./components/header/header.component";
+import Footer from "./components/footer/footer.component";
 
 // 1. STANDARD METADATA (Title, Description, Social Cards)
 export const metadata: Metadata = {
@@ -50,7 +52,9 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Header />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
