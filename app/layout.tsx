@@ -51,7 +51,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body
+        style={{
+          fontFamily: "'Poppins', sans-serif",
+          background: "var(--cream)",
+          color: "var(--text)",
+        }}
+      >
         <Header />
         {children}
         <Footer />

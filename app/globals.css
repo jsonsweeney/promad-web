@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
 /* ── Variables ── */
 :root {
-  --blue: #3d5a99;
-  --blue-dark: #4f68b3;
+  --blue: #4f68b3;
+  --blue-dark: #222d4d;
   --blue-mid: #4a6bb5;
   --blue-light: #6b8fd4;
-  --cream: #f8f7f4;
+  --cream: hsl(210, 33%, 98%);
   --white: #ffffff;
-  --text: #1a1a2e;
+  --text: #111625;
   --text-muted: #6b7280;
   --whatsapp: #25d366;
   --instagram: #e1306c;

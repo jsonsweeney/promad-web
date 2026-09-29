@@ -1,28 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
-
-/* ── Variables ── */
-:root {
-  --blue: #4f68b3;
-  --blue-dark: #222d4d;
-  --blue-mid: #4a6bb5;
-  --blue-light: #6b8fd4;
-  --cream: hsl(210, 33%, 98%);
-  --white: #ffffff;
-  --text: #111625;
-  --text-muted: #6b7280;
-  --whatsapp: #25d366;
-  --instagram: #e1306c;
-  --apple: #1a1a2e;
-  --android: #3ddc84;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: var(--cream);
-  color: var(--text);
-}
-
 .container {
   max-width: 1600px;
   margin: 0 auto;
